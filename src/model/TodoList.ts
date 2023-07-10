@@ -19,7 +19,19 @@ export default class TodoList implements List {
   }
 
   load(): void {
-        
+    const storedList: string | null = localStorage.getItem('todos');
+    if (typeof storedList !== 'string') return;
+
+    const parsedList: {
+      _id: string;
+      _item: string;
+      _checked: boolean;
+    }[] = JSON.parse(storedList);
+
+    parsedList.forEach((item) => {
+      const newItem = new TodoItem(item._id, item._item, item._checked);
+      TodoList.instance.addItem(newItem);
+    });
   }
 
   save(): void {
