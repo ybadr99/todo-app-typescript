@@ -11,7 +11,7 @@ TodoApp is a simple todo list application created using TypeScript and object-or
 
 ## Live Demo
 
-You can try out the TodoApp by visiting the [Live Demo](https://ybadr99.github.io/todoapp) hosted on GitHub Pages.
+You can try out the TodoApp by visiting the [Live Demo](https://todo-app-typescript-three.vercel.app/) hosted on Vercel.
 
 ## Installation
 
